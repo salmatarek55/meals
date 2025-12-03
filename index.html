@@ -1,0 +1,235 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EliteHomes - Your dream home Awaits</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+ <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+
+
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+<!-- navbar -->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top mb-4">
+  <div class="container ms-auto" style="width:80% ">
+      <div class="navbar-brand d-flex gap-2 align-items-center">
+      <div class="w-50 h-50 rounded-circle p-2" style="background-color:#FE4722;">
+        <i class="fa-solid fa-utensils text-white" style="font-size:18px;"></i>
+      </div>
+      <div class="logo">
+        <h3>What's For Dinner</h3>
+        <p class="text-secondary">Your daily meal inspiration</p>
+      </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto d-flex gap-4 align-items-lg-center align-items-start justify-content-lg-center">
+        <li class="nav-item">
+          <button class="icon-btn p-0 border-0 nav-link">
+            <i class="fa-solid fa-bookmark"></i>
+             <span class="">Saved Recipe</span>
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="icon-btn p-0 border-0 nav-link">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+             <span class="">Recent</span>
+          </button>
+        </li>
+        <li class="nav-item">
+           <button class="icon-btn p-0 border-0 nav-link">
+            <i class="fa-solid fa-gear"></i>
+             <span class="">Settings</span>
+          </button>
+        </li>
+        <li class="nav-item">
+           <button class="image-wrapper nav-link p-0 ">
+            <img src="images/avatar-2 (1).jpg" alt="person">
+            <span class="">Profile</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ///////////////////////////////////////// -->
+ <div class="container " style="margin-top: 120px; ">
+   <div class="row mt-5 bg-white d-flex rounded-4 " style="height: auto;">
+      <div class="col-sm-12 col-lg-5">
+        <div class="image-wrapper position-relative">
+          <img id="image" alt="meal" >
+          <div class="meal-rating-box">
+             <i class="fa-solid fa-star" style="color: #FDC700;margin-top: -3px;"></i>
+             <h4 id="mealrate"></h4>
+             <p id="mealreview" style="margin-top: 9px;"></p>
+         </div>
+         <div class="meal-times-box ">
+            <div class="text-center">
+               <i class="fa-solid fa-clock" style="color: #FE4722;"></i>
+               <p class="text-secondary">Prep Time</p>
+               <h5 id="PrepTime"></h5>
+            </div>
+           <div class="text-center">
+              <i class="fa-solid fa-fire-burner" style="color: #FB2C36;"></i>
+              <p class="text-secondary">Cook Time</p>
+              <h5  id="CookTime"></h5>
+           </div>
+           <div class="text-center">
+             <i class="fa-solid fa-users" style="color: #2B7FFF;"></i>
+             <p class="text-secondary">Servings</p>
+             <h5  id="Servings"></h5>
+           </div>
+         </div>
+        </div>
+  </div>
+
+  <div class="col-sm-12 col-lg-7">
+    <div class="title d-flex p-2">
+      <div style="width: 70%;">
+       <div class="d-flex gap-2 flex-column">
+        <div class="d-flex gap-2">
+           <span>
+          <p class="rounded-4 px-2 mt-3 ms-4" id="mealProperty" style="background-color:#DBFCE7 ; color:#008236 ;"></p>
+        </span>
+        <span>
+          <p class="rounded-4 px-2 mt-3 ms-4" id="mealCountry" style="background-color: #DBEAFE; color: #1447E6;"></p>
+        </span>
+        </div>
+        <h1 id="titleName"></h1>
+        <p id="titleDetails" class="text-secondary"></p>
+       </div>
+      </div>
+      <div style="width: 30%; " class="d-flex gap-2 align-items-center mt-5 ms-5">
+        <div class="title-icon w-25 h-50 rounded-2 px-2 py-3 d-flex align-items-center justify-content-center" >
+          <i class="fa-solid fa-bookmark text-center " style="color: #FE4722;"></i>
+        </div>
+        <div class="title-icon w-25 h-50 rounded-2 px-2 py-3  d-flex align-items-center justify-content-center">
+          <i class="fa-solid fa-share-nodes text-center"style="color: #FE4722;"></i>
+        </div>
+      </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide mt-2" >
+          <div class="carousel-indicators position-static m-2">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            >
+              <i class="fa-solid fa-list-check"></i>Ingredients
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            >
+              <i class="fa-solid fa-book-open"></i>Instructions
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            >
+              <i class="fa-solid fa-chart-pie"></i>Nutrition
+            </button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            >
+              <i class="fa-solid fa-lightbulb"></i>Chef`s Tips
+            </button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row cardIngredients mx-2 rounded-3  p-3" style="background-color: #FFF9EC; width: 100%;">
+
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row cardInstructions p-5">
+
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row cardNutrition p-5" >
+                <div class="col-lg-6 col-sm-12 col-md-12">
+                  <div class="d-flex justify-content-between rounded-2 align-items-center p-2 mb-4" style="background-color: #F9FAFB;">
+                   <div class="d-flex gap-2 align-items-center justify-content-center">
+                    <i class="fa-solid fa-fire w-50 h-50 rounded-2 p-2" style="color: #D99B21; margin-top: -9px; background-color: #FEF9C2;"></i>
+                    <p>Calories</p>
+                   </div>
+                    <h4 id="Calories"></h4>
+                  </div>
+                  <div class="d-flex justify-content-between rounded-2 align-items-center p-2 mb-4" style="background-color: #F9FAFB;">
+                   <div class="d-flex gap-2 align-items-center justify-content-center">
+                    <i class="fa-solid fa-wheat w-25 h-25 rounded-2 p-2" style="color: #FE4722; margin-top: -9px; background-color: #FFEDD4;"></i>
+                    <p>Carbohydrates</p>
+                   </div>
+                    <h4 id="Carbohydrates"></h4>
+                  </div>
+                  <div class="d-flex justify-content-between rounded-2 align-items-center p-2 mb-4" style="background-color: #F9FAFB;">
+                   <div class="d-flex gap-2 align-items-center justify-content-center">
+                    <i class="fa-solid fa-seedling w-50 h-50 rounded-2 p-2" style="color:#00A63E ; margin-top: -9px; background-color: #DBFCE7;"></i>
+                    <p>Fiber</p>
+                   </div>
+                    <h4 id="Fiber"></h4>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 col-md-12">
+                  <div class="d-flex justify-content-between rounded-2 align-items-center p-2 mb-4" style="background-color: #F9FAFB;">
+                   <div class="d-flex gap-2 align-items-center justify-content-center">
+                    <i class="fa-solid fa-dumbbell w-50 h-50 rounded-2 p-2" style="color:#155DFC ; margin-top: -9px; background-color: #DBEAFE;"></i>
+                    <p>Protein</p>
+                   </div>
+                    <h4 id="Protein"></h4>
+                  </div>
+                  <div class="d-flex justify-content-between rounded-2 align-items-center p-2 mb-4" style="background-color: #F9FAFB;">
+                   <div class="d-flex gap-2 align-items-center justify-content-center">
+                    <i class="fa-solid fa-droplet w-50 h-50 rounded-2 p-2" style="color:#E7000B; margin-top: -9px; background-color: #FFE2E2;"></i>
+                    <p>Fat</p>
+                   </div>
+                    <h4 id="Fat"></h4>
+                  </div>
+                  <div class="d-flex justify-content-between rounded-2 align-items-center p-2 mb-4" style="background-color: #F9FAFB;">
+                   <div class="d-flex gap-2 align-items-center justify-content-center">
+                    <i class="fa-solid fa-cube w-50 h-50 rounded-2 p-2" style="color:#E60076 ; margin-top: -9px; background-color: #FCE7F3;"></i>
+                    <p>Sodium</p>
+                   </div>
+                    <h4 id="Sodium"></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row cardChef p-5">
+                  
+              </div>
+            </div>
+          </div>
+    </div>
+     <button id="newMealBtn" class="btn btn-color mt-3 ms-3" onclick="randomMeal()">
+      <i class="fa-solid fa-arrows-rotate me-2"></i>Try Another Recipe
+    </button>
+  </div>
+ </div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
